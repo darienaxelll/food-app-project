@@ -17,10 +17,11 @@ const MealItemForm = (props) => {
       enteredAmount < 1 ||
       enteredAmount > 5
     ) {
-      console.log("This worked!!");
       setAmountIsValid(false);
       return;
     }
+
+    props.onAddToCart(enteredAmountNum);
   };
 
   return (
